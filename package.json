@@ -1,0 +1,10 @@
+{
+  "name": "third-node-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "electron": "5.0.6"
+  }
+}
