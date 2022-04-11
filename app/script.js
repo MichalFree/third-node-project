@@ -13,6 +13,7 @@ class AppDescription extends React.Component {
 };
 
 class App extends React.Component {
+  
   state = {
     status: 'off',
     time: 0,
@@ -29,18 +30,19 @@ class App extends React.Component {
   }
 
   step = () => {
+    const { time, status } = this.state
     this.setState({
-      time: this.state.time - 1,
-    });
+      time: time - 1,
+    }, () => {
 
-    if (this.state.time === 0) {
-      if (this.state.status === 'work') {
+    if (time === 0) {
+      if (status === 'work') {
         this.setState({
           status: 'rest',
           time: 20,
         });
         this.playBell();
-      } else if (this.state.status === 'rest') {
+      } else if (status === 'rest') {
         this.setState({
           status: 'work',
           time: 1200,
@@ -48,7 +50,7 @@ class App extends React.Component {
         this.playBell();
       }
     }
-  };
+  });
 
   startTimer = () => {
     this.setState({
