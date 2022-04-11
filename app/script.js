@@ -84,8 +84,8 @@ class App extends React.Component {
       <div>
         <h1>Protect your eyes</h1>
         {(status === 'off') && <AppDescription />}
-        {(status === 'work') && <img src="./images/work.png" />}
-        {(status === 'rest') && <img src="./images/rest.png" />}
+        {(status === 'work') && <img src="./images/Work.png" />}
+        {(status === 'rest') && <img src="./images/Rest.png" />}
         {(status !== 'off') && <div className="timer">{this.formatTime(time)}</div>}
         {(status === 'off') && <button className="btn" onClick={this.startTimer}>Start</button>}
         {(status !== 'off') && <button className="btn" onClick={this.stopTimer}>Stop</button>}
